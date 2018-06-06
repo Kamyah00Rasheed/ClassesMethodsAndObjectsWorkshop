@@ -1,6 +1,6 @@
 package com.company;
 
-public class Cat extends Pet{
+public class Cat extends Pet {
 
     //String name;
     boolean whiskers;
@@ -10,6 +10,7 @@ public class Cat extends Pet{
     String furColor;
     char gender;
 
+
     public Cat(String ownerName, String petName, int age, char gender, String homeAddress, boolean fur, double weight) {
         super(ownerName, petName, age, gender, homeAddress);
         this.fur = fur;
@@ -17,7 +18,7 @@ public class Cat extends Pet{
     }
 
     //public Cat(String ownerName, String petName, int age, char gender, String homeAddress) {
-       // super(ownerName, petName, age, gender, homeAddress);
+    // super(ownerName, petName, age, gender, homeAddress);
     //}
 
    /* public Cat(String name, int legs, double weight) {
@@ -81,5 +82,34 @@ public class Cat extends Pet{
 
     public void setFurColor(String furColor) {
         this.furColor = furColor;
+    }
+
+    @Override
+    protected String makeSound() {
+        return "Meooooow!";
+
+    }
+
+    protected String catYears() {
+        int catYears = 3;
+
+        switch (super.getAge()) {
+            case 0:
+                catYears = 0;
+                break;
+            case 1:
+                catYears = 19;
+                break;
+            case 2:
+                catYears = 24;
+                break;
+            default:
+                catYears = (super.getAge() - 2) * 4 + 24;
+                break;
+
+        }
+            return super.getPetName() + " is " + super.getAge() + " human years old and " + catYears + " cat years old.";
+
+
     }
 }
