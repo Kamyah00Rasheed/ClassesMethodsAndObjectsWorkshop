@@ -90,6 +90,20 @@ public class Cat extends Pet {
 
     }
 
+    /* switch(expression) {
+        case value :
+            // Statements
+            break; // optional
+
+        case value :
+            // Statements
+            break; // optional
+
+        // You can have any number of case statements.
+        default : // Optional
+            // Statements
+    } */
+
     protected String catYears() {
         int catYears = 3;
 

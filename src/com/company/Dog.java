@@ -1,6 +1,6 @@
 package com.company;
 
-public class Dog {
+public class Dog extends Pet{
 
     String name;
     String furColor;
@@ -9,11 +9,16 @@ public class Dog {
     String dogBreed;
     char gender;
 
-    public Dog(String name, int legs, double weight) {
+    public Dog(String ownerName, String petName, int age, char gender, String homeAddress, String name, String furColor, int legs, double weight, char gender1) {
+        super(ownerName, petName, age, gender, homeAddress);
         this.name = name;
+        this.furColor = furColor;
         this.legs = legs;
         this.weight = weight;
+        this.gender = gender1;
     }
+
+
 
     public String getName() {
         return name;
